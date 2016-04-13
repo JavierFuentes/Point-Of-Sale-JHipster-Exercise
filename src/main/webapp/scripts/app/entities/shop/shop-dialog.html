@@ -1,0 +1,90 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()" show-validation>
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myShopLabel" translate="pOSDesignPatternsExerciseApp.shop.home.createOrEditLabel">Create or edit a Shop</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="shop.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.shop.name" for="field_name">Name</label>
+            <input type="text" class="form-control" name="name" id="field_name"
+                    ng-model="shop.name"
+                    required ng-maxlength="30" />
+            <div ng-show="editForm.name.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.name.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.name.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="30">
+                    This field cannot be longer than 30 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.shop.address" for="field_address">Address</label>
+            <input type="text" class="form-control" name="address" id="field_address"
+                    ng-model="shop.address"
+                    required ng-maxlength="30" />
+            <div ng-show="editForm.address.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.address.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.address.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="30">
+                    This field cannot be longer than 30 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.shop.city" for="field_city">City</label>
+            <input type="text" class="form-control" name="city" id="field_city"
+                    ng-model="shop.city"
+                    required ng-maxlength="30" />
+            <div ng-show="editForm.city.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.city.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.city.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="30">
+                    This field cannot be longer than 30 characters.
+                </p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.shop.phone" for="field_phone">Phone</label>
+            <input type="text" class="form-control" name="phone" id="field_phone"
+                    ng-model="shop.phone"
+                    required ng-maxlength="20" />
+            <div ng-show="editForm.phone.$invalid">
+                <p class="help-block"
+                    ng-show="editForm.phone.$error.required" translate="entity.validation.required">
+                    This field is required.
+                </p>
+                <p class="help-block"
+                    ng-show="editForm.phone.$error.maxlength" translate="entity.validation.maxlength" translate-value-max="20">
+                    This field cannot be longer than 20 characters.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

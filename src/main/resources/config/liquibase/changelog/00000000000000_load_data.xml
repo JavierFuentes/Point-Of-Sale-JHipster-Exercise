@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <changeSet id="00000000000002" author="javier">
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/tax.csv"
+                  separator=";"
+                  tableName="tax">
+        </loadData>
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/discount.csv"
+                  separator=";"
+                  tableName="discount">
+        </loadData>
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/payment_method.csv"
+                  separator=";"
+                  tableName="payment_method">
+        </loadData>
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/product.csv"
+                  separator=";"
+                  tableName="product">
+        </loadData>
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/shop.csv"
+                  separator=";"
+                  tableName="shop">
+        </loadData>
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/point_of_sale.csv"
+                  separator=";"
+                  tableName="point_of_sale">
+            <column name="activated" type="boolean"/>
+        </loadData>
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/turn.csv"
+                  separator=";"
+                  tableName="turn">
+            <column name="activated" type="boolean"/>
+        </loadData>
+        <loadData encoding="UTF-8"
+                  file="config/liquibase/catalog.csv"
+                  separator=";"
+                  tableName="catalog">
+        </loadData>
+    </changeSet>
+</databaseChangeLog>

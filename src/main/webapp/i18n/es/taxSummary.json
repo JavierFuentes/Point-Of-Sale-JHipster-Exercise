@@ -1,0 +1,26 @@
+{
+    "pOSDesignPatternsExerciseApp": {
+        "taxSummary" : {
+            "home": {
+                "title": "Cálculos de Impuestos",
+                "createLabel": "Crear nuevo Cálculo de Impuestos",
+                "createOrEditLabel": "Crear o editar Cálculo de Impuestos"
+            },
+            "created": "Un nuevo Cálculo de Impuestos ha sido creado con el identificador {{ param }}",
+            "updated": "Un Cálculo de Impuestos ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Cálculo de Impuestos ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Cálculo de Impuestos {{ id }}?"
+            },
+            "detail": {
+                "title": "Cálculo de Impuestos"
+            },
+            "taxbase": "Base",
+            "taxrate": "%",
+            "taxamount": "Cuota",
+            "totalamount": "Importe Total (i.i)",
+            "tax": "Tipo Impuesto",
+            "sale": "Venta"
+        }
+    }
+}

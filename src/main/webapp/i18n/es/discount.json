@@ -1,0 +1,24 @@
+{
+    "pOSDesignPatternsExerciseApp": {
+        "discount" : {
+            "home": {
+                "title": "Descuentos",
+                "createLabel": "Crear nuevo Descuento",
+                "createOrEditLabel": "Crear o editar Descuento"
+            },
+            "created": "Un nuevo Descuento ha sido creado con el identificador {{ param }}",
+            "updated": "Un Descuento ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Descuento ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Descuento {{ id }}?"
+            },
+            "detail": {
+                "title": "Descuento"
+            },
+            "description": "Descripción",
+            "percentage": "%",
+            "product": "Producto",
+            "item": "Item"
+        }
+    }
+}

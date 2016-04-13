@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+   <changeSet author="javier (generated)" id="1453054363385-1">
+      <addColumn tableName="item">
+         <column name="sale_id" type="bigint"/>
+      </addColumn>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1453054363385-2">
+      <addForeignKeyConstraint baseColumnNames="sale_id"
+                               baseTableName="item"
+                               constraintName="FK_9vvwv1n8sf5cgno2oamq3u1b"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="sale"/>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1453054363385-3">
+      <addColumn tableName="sale">
+         <column name="paymentauth" type="varchar(60)"/>
+      </addColumn>
+   </changeSet>
+</databaseChangeLog>

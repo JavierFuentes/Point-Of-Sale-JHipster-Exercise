@@ -1,0 +1,34 @@
+{
+    "pOSDesignPatternsExerciseApp": {
+        "item" : {
+            "home": {
+                "title": "Items",
+                "createLabel": "Crear nuevo Item",
+                "createOrEditLabel": "Crear o editar Item"
+            },
+            "created": "Un nuevo Item ha sido creado con el identificador {{ param }}",
+            "updated": "Un Item ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Item ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Item {{ id }}?"
+            },
+            "detail": {
+                "title": "Item"
+            },
+            "barcode": "Código de Barras",
+            "description": "Descripción",
+            "quantity": "Cantidad",
+            "price": "Precio",
+            "discountpct": "% Dto.",
+            "discountamount": "Dto.",
+            "baseamount": "Base",
+            "taxrate": "% Imp.",
+            "taxamount": "Cuota",
+            "totalamount": "Importe Total (i.i)",
+            "discount": "Tipo Descuento",
+            "tax": "Tipo Impuesto",
+            "catalog": "Catálogo",
+            "sale": "Venta"
+        }
+    }
+}

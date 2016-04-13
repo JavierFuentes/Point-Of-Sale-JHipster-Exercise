@@ -1,0 +1,64 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "catalog",
+      "otherEntityName": "catalog",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "shop"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "pointofsale",
+      "otherEntityName": "pointofsale",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "shop"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "name",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 30
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "address",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 30
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "city",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 30
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "phone",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 20
+    }
+  ],
+  "changelogDate": "20160112223416",
+  "dto": "no",
+  "pagination": "pagination",
+  "javadoc": "Shop entity"
+}

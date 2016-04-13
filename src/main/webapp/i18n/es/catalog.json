@@ -1,0 +1,26 @@
+{
+    "pOSDesignPatternsExerciseApp": {
+        "catalog" : {
+            "home": {
+                "title": "Catálogos",
+                "createLabel": "Crear nuevo Catálogo",
+                "createOrEditLabel": "Crear o editar Catálogo"
+            },
+            "created": "Un nuevo Catálogo ha sido creado con el identificador {{ param }}",
+            "updated": "Un Catálogo ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Catálogo ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Catálogo {{ id }}?"
+            },
+            "detail": {
+                "title": "Catálogo"
+            },
+            "barcode": "Código de Barras",
+            "price": "Precio",
+            "inventory": "Inventario",
+            "product": "Producto",
+            "shop": "Tienda",
+            "item": "Item"
+        }
+    }
+}

@@ -1,0 +1,134 @@
+/** Discount entity */
+entity Discount {
+    description String required maxlength(10),
+            percentage Float required min(0) max(100)
+}
+
+/** Tax entity */
+entity Tax {
+    description String required maxlength(10),
+            rate Float required min(0) max(100)
+}
+
+/** Product entity */
+entity Product {
+    description String required maxlength(20)
+}
+
+relationship ManyToOne {
+    Product { tax(description) } to Tax
+}
+
+relationship ManyToOne {
+    Product { discount(description) } to Discount
+}
+
+/** Shop entity */
+entity Shop {
+    name String required maxlength(30),
+            address String required maxlength(30),
+    city String required maxlength(30),
+            phone String required maxlength(20)
+}
+
+/** Catalog entity */
+entity Catalog {
+    barcode String required maxlength(30),
+            price BigDecimal required,
+            inventory Long required
+}
+
+relationship ManyToOne {
+    Catalog { shop(name) } to Shop { catalog(description) }
+}
+
+relationship ManyToOne {
+    Catalog { product(description) } to Product { catalog(description) }
+}
+
+/** Point Of Sale entity */
+entity Pointofsale {
+    activated Boolean
+}
+
+relationship ManyToOne {
+    Pointofsale { shop(name) } to Shop { pointofsale }
+}
+
+/** Turn entity */
+entity Turn {
+    activated Boolean,
+            started ZonedDateTime,
+    ended ZonedDateTime
+}
+
+relationship ManyToOne {
+    Turn {} to Pointofsale {}
+}
+
+relationship ManyToOne {
+    Turn { cashier(login) } to User {}
+}
+
+/** Payment Method */
+entity PaymentMethod {
+    description String required maxlength(10)
+}
+
+/** Sale entity */
+entity Sale {
+    completed Boolean,
+            time ZonedDateTime,
+    totalamount BigDecimal,
+            payedamount BigDecimal
+}
+
+relationship ManyToOne {
+    Sale {} to Turn { sale }
+}
+
+relationship ManyToOne {
+    Sale {} to PaymentMethod { sale(description) }
+}
+
+/** Tax Summary entity */
+entity TaxSummary {
+    taxbase BigDecimal,
+            taxrate Float,
+    taxamount BigDecimal,
+            totalamount BigDecimal
+}
+
+relationship ManyToOne {
+    TaxSummary {} to Sale {}
+}
+
+relationship ManyToOne {
+    TaxSummary { tax(description) } to Tax {}
+}
+
+/** Item entity */
+entity Item {
+    barcode String,
+            description String,
+    quantity Long,
+            price BigDecimal,
+    discountpct Float,
+            discountamount BigDecimal,
+    baseamount BigDecimal
+    taxrate Float,
+            taxamount BigDecimal,
+    totalamount BigDecimal
+}
+
+relationship ManyToOne {
+    Item { catalog(barcode) } to Catalog {}
+}
+
+relationship ManyToOne {
+    Item { tax(description) } to Tax {}
+}
+
+relationship ManyToOne {
+    Item { discount(description) } to Discount {}
+}

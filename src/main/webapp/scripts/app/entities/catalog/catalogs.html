@@ -1,0 +1,63 @@
+<div>
+    <h2 translate="pOSDesignPatternsExerciseApp.catalog.home.title">Catalogs</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="catalog.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="pOSDesignPatternsExerciseApp.catalog.home.createLabel">Create a new Catalog</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="shop.name"><span translate="pOSDesignPatternsExerciseApp.catalog.shop">shop</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="product.description"><span translate="pOSDesignPatternsExerciseApp.catalog.product">product</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="price"><span translate="pOSDesignPatternsExerciseApp.catalog.price">Price</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="inventory"><span translate="pOSDesignPatternsExerciseApp.catalog.inventory">Inventory</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="barcode"><span translate="pOSDesignPatternsExerciseApp.catalog.barcode">Barcode</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="catalog in catalogs track by catalog.id">
+                    <td><a ui-sref="catalog.detail({id:catalog.id})">{{catalog.id}}</a></td>
+                    <td>
+                        <a ui-sref="shop.detail({id:catalog.shop.id})">{{catalog.shop.name}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="product.detail({id:catalog.product.id})">{{catalog.product.description}}</a>
+                    </td>
+                    <td>{{catalog.price}}</td>
+                    <td>{{catalog.inventory}}</td>
+                    <td>{{catalog.barcode}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="catalog.detail({id:catalog.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="catalog.edit({id:catalog.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="catalog.delete({id:catalog.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <uib-pagination class="pagination-sm" total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pagination>
+    </div>
+</div>

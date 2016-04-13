@@ -1,0 +1,78 @@
+
+<div>
+    <h2><span translate="pOSDesignPatternsExerciseApp.sale.detail.title">Sale</span> {{sale.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.sale.completed">Completed</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{sale.completed}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.sale.time">Time</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{sale.time | date:'medium'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.sale.totalamount">Totalamount</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{sale.totalamount}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.sale.payedamount">Payedamount</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{sale.payedamount}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.sale.paymentauth">PaymentAuth</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{sale.paymentauth}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.sale.turn">turn</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="turn.detail({id:sale.turn.id})">{{sale.turn.id}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.sale.paymentmethod">paymentmethod</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="paymentMethod.detail({id:sale.paymentmethod.id})">{{sale.paymentmethod.description}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

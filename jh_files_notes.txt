@@ -1,0 +1,29 @@
+enum Language {
+    FRENCH, ENGLISH, SPANISH
+}
+
+entity Book {
+            title String required,
+            description String required minlength(5) maxlength(50),
+            publicationDate LocalDate,
+                    price BigDecimal
+}
+
+entity Author {
+            name String required,
+            email String required maxlength(30) minlength(5) pattern("[\\w]*@[a-zA-Z]*.com"),
+            birthDate LocalDate
+}
+
+relationship OneToMany {
+    Author { book } to Book { writer(name) }
+}
+
+dto Book, Author with mapstruct
+
+paginate Book, Author with infinite-scroll
+paginate Author with pager
+paginate Author with pagination
+
+service Book with serviceClass
+service Author with serviceImpl

@@ -1,0 +1,20 @@
+<!-- Summary Buttons -->
+<div class="summary-button-group">
+    <button class="btn btn-primary summarybutton fa-print"
+            translate="pos.summary.button.print"
+            ng-print print-element-id="printSection">
+        Print<br/>(Ctrl+P)
+    </button>
+
+    <button type="button" class="btn btn-primary summarybutton fa-credit-card"
+            translate="pos.summary.button.creditcard"
+            ng-click="doPayment('CREDITCARD')">
+        Credit<br/>Card (F8)
+    </button>
+
+    <button type="button" class="btn btn-primary summarybutton fa-money"
+            translate="pos.summary.button.cash"
+            ng-click="doPayment('CASH')">
+        Cash<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(F9)
+    </button>
+</div>

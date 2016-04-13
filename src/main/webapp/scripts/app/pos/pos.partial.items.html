@@ -1,0 +1,36 @@
+<!-- Point of Sale Item List -->
+<div class="detailsPanel">
+             <span translate="pos.cart.detail.title">
+                Shopping Cart
+             </span>
+    <span style="float: right;"><img src="{{urlBarcodeImage}}" class="barcodeimg"/></span>
+    <hr>
+    <table style="width: 100%;">
+        <tr style="font-weight: bold">
+            <td style="text-align: right; width: 1%" translate="pos.cart.detail.quantity">
+                Qty
+            </td>
+            <td style="text-align: left" translate="pos.cart.detail.description">
+                Description
+            </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td style="text-align: right" translate="pos.cart.detail.amount">
+                Amount
+            </td>
+        </tr>
+        <tr ng-repeat="item in itemList | orderBy: '-id' track by item.id">
+            <td style="text-align: right; width: 1%">
+                {{item.quantity}}
+            </td>
+            <td style="text-align: left" tooltip-append-to-body="true" uib-tooltip="{{item.barcode}}">
+                {{item.description}}
+            </td>
+            <td>{{item.discount.description}}</td>
+            <td>{{item.tax.description}}</td>
+            <td style="text-align: right">
+                {{item.totalamount | number : 3}}
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,22 @@
+{
+    "pOSDesignPatternsExerciseApp": {
+        "paymentMethod" : {
+            "home": {
+                "title": "Formas de Pago",
+                "createLabel": "Crear nueva Forma de Pago",
+                "createOrEditLabel": "Crear o editar Forma de Pago"
+            },
+            "created": "Una nueva Forma de Pago ha sido creada con el identificador {{ param }}",
+            "updated": "Una Forma de Pago ha sido actualizada con el identificador {{ param }}",
+            "deleted": "Una Forma de Pago ha sido eliminada con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Forma de Pago {{ id }}?"
+            },
+            "detail": {
+                "title": "Forma de Pago"
+            },
+            "description": "Descripción",
+            "sale": "Venta"
+        }
+    }
+}

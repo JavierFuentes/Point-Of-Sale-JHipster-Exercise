@@ -1,0 +1,62 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myTurnLabel" translate="pOSDesignPatternsExerciseApp.turn.home.createOrEditLabel">Create or edit a Turn</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+            ng-model="turn.id" readonly />
+        </div>
+        <div class="form-group">
+            <label translate="pOSDesignPatternsExerciseApp.turn.pointofsale" for="field_pointofsale">pointofsale</label>
+            <select class="form-control" id="field_pointofsale" name="pointofsale" ng-model="turn.pointofsale" ng-options="pointofsale as pointofsale.shop.name + ' - ' + pointofsale.id for pointofsale in pointofsales | orderBy:'shop.name' track by pointofsale.id"
+                    required>
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="pOSDesignPatternsExerciseApp.turn.cashier" for="field_cashier">cashier</label>
+            <select class="form-control" id="field_cashier" name="cashier" ng-model="turn.cashier" ng-options="user as user.login for user in users track by user.id"
+                    required>
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.turn.started" for="field_started">Start</label>
+            <input id="field_started" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="turn.started" is-open="datePickerForStart.status.opened"
+            />
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="datePickerForStartOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.turn.ended" for="field_ended">End</label>
+            <input id="field_ended" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="turn.ended" is-open="datePickerForEnd.status.opened"
+            />
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="datePickerForEndOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.turn.activated" for="field_activated">Activated</label>
+            <input type="checkbox" class="form-control" name="activated" id="field_activated"
+                   ng-model="turn.activated"
+            />
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,51 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "turn",
+      "otherEntityName": "turn",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "paymentmethod",
+      "otherEntityName": "paymentMethod",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "description"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "taxSummary",
+      "otherEntityName": "taxSummary",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "sale"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "completed",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "time",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "totalamount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "payedamount",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "changelogDate": "20160112235855",
+  "dto": "no",
+  "pagination": "pagination",
+  "javadoc": "Sale entity"
+}

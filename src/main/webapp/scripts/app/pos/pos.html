@@ -1,0 +1,30 @@
+<jh-alert></jh-alert>
+
+<form class="form" name="posForm" role="form" novalidate show-validation>
+    <!-- Barcode & Total -->
+    <div class="row">
+        <a href="http://upcdatabase.org/random" target="_blank">
+            <div class="sign">{{ signShowed }}</div>
+        </a>
+
+        <input id="barcodeinput" class="form-control barcode" type="text" name="value"
+                   ng-model="displayValue" ng-change="onBarcodeChange()" ng-keyup="onBarcodeKeyup($event)"
+                   maxlength="13" autofocus autocomplete="off" placeholder="barcode"/>
+
+        &nbsp;
+        <!--<img src="//www.gifmania.co.uk/Art/Music/Music-Studio/Music-Speakers/Blue-Speaker-55944.gif"-->
+             <!--onError="this.onerror=null; this.src='assets/images/animated-speaker.gif';" style="height: 15px; width: 15px;">-->
+        <a ng-click="AlterShowNavigationBar()">
+            <img src="assets/images/animated-speaker.gif" style="height: 15px; width: 15px;"/>
+        </a>
+        <div class="total">{{ totalValue | number : 2}} €</div>
+    </div>
+
+    <div class="row">
+
+        <div ng-include="'scripts/app/pos/pos.partial.digitpanel.html'"></div>
+
+        <div ng-include="'scripts/app/pos/pos.partial.items.html'"></div>
+
+    </div>
+</form>

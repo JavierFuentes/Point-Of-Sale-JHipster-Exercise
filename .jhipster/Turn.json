@@ -1,0 +1,46 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "pointofsale",
+      "otherEntityName": "pointofsale",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "sale",
+      "otherEntityName": "sale",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "turn"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "cashier",
+      "otherEntityName": "user",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "login"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "activated",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "starting",
+      "fieldType": "ZonedDateTime"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "ending",
+      "fieldType": "ZonedDateTime"
+    }
+  ],
+  "changelogDate": "20160112235855",
+  "dto": "no",
+  "pagination": "pagination",
+  "javadoc": "Turn entity"
+}

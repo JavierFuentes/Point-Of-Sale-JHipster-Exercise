@@ -1,0 +1,63 @@
+<div>
+    <h2 translate="pOSDesignPatternsExerciseApp.turn.home.title">Turns</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="turn.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="pOSDesignPatternsExerciseApp.turn.home.createLabel">Create a new Turn</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="pointofsale.id"><span translate="pOSDesignPatternsExerciseApp.turn.pointofsale">pointofsale</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="cashier.login"><span translate="pOSDesignPatternsExerciseApp.turn.cashier">cashier</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="started"><span translate="pOSDesignPatternsExerciseApp.turn.started">Start</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="ended"><span translate="pOSDesignPatternsExerciseApp.turn.ended">End</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="activated"><span translate="pOSDesignPatternsExerciseApp.turn.activated">Activated</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="turn in turns track by turn.id">
+                    <td><a ui-sref="turn.detail({id:turn.id})">{{turn.id}}</a></td>
+                    <td>
+                        <a ui-sref="pointofsale.detail({id:turn.pointofsale.id})">{{turn.pointofsale.shop.name + ' - ' + turn.pointofsale.id}}</a>
+                    </td>
+                    <td>
+                        {{turn.cashier.login}}
+                    </td>
+                    <td>{{turn.started | date:'medium'}}</td>
+                    <td>{{turn.ended | date:'medium'}}</td>
+                    <td>{{turn.activated}}</td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="turn.detail({id:turn.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="turn.edit({id:turn.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="turn.delete({id:turn.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <uib-pagination class="pagination-sm" total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pagination>
+    </div>
+</div>

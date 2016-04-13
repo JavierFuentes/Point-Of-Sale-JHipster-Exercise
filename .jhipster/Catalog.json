@@ -1,0 +1,57 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "product",
+      "otherEntityName": "product",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "description"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "shop",
+      "otherEntityName": "shop",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "name"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "item",
+      "otherEntityName": "item",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "catalog"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "barcode",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 30
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "price",
+      "fieldType": "BigDecimal",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "inventory",
+      "fieldType": "Long",
+      "fieldValidateRules": [
+        "required"
+      ]
+    }
+  ],
+  "changelogDate": "20160112223416",
+  "dto": "no",
+  "pagination": "pagination",
+  "javadoc": "Catalog entity"
+}

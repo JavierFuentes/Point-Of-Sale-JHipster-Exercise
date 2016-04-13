@@ -1,0 +1,41 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "discount",
+      "otherEntityName": "discount",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "description"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "tax",
+      "otherEntityName": "tax",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "description"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "catalog",
+      "otherEntityName": "catalog",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "product"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 20
+    }
+  ],
+  "changelogDate": "20160112215358",
+  "dto": "no",
+  "pagination": "pagination",
+  "javadoc": "Product entity"
+}

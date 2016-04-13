@@ -1,0 +1,53 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "product",
+      "otherEntityName": "product",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "tax"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "taxSummary",
+      "otherEntityName": "taxSummary",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "tax"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "item",
+      "otherEntityName": "item",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "tax"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 10
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "rate",
+      "fieldType": "Float",
+      "fieldValidateRules": [
+        "required",
+        "min",
+        "max"
+      ],
+      "fieldValidateRulesMin": 0,
+      "fieldValidateRulesMax": 100
+    }
+  ],
+  "changelogDate": "20160112215358",
+  "dto": "no",
+  "pagination": "pagination",
+  "javadoc": "Tax entity"
+}

@@ -1,0 +1,23 @@
+{
+    "pOSDesignPatternsExerciseApp": {
+        "pointofsale" : {
+            "home": {
+                "title": "TPVs",
+                "createLabel": "Crear nuevo TPV",
+                "createOrEditLabel": "Crear o editar TPV"
+            },
+            "created": "Un nuevo TPV ha sido creado con el identificador {{ param }}",
+            "updated": "Un TPV ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un TPV ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar TPV {{ id }}?"
+            },
+            "detail": {
+                "title": "TPVs"
+            },
+            "activated": "Activado",
+            "shop": "Tienda",
+            "turn": "Turno"
+        }
+    }
+}

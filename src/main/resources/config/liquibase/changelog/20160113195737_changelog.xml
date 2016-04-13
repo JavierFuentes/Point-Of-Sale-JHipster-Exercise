@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+   <changeSet author="javier (generated)" id="1452711462700-1">
+      <createTable tableName="catalog">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="catalogPK"/>
+         </column>
+         <column name="barcode" type="VARCHAR(30)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="inventory" type="BIGINT">
+            <constraints nullable="false"/>
+         </column>
+         <column name="price" type="DECIMAL(10, 2)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="product_id" type="BIGINT"/>
+         <column name="shop_id" type="BIGINT"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-2">
+      <createTable tableName="discount">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="discountPK"/>
+         </column>
+         <column name="description" type="VARCHAR(10)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="percentage" type="FLOAT">
+            <constraints nullable="false"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-3">
+      <createTable tableName="item">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="itemPK"/>
+         </column>
+         <column name="barcode" type="VARCHAR(255)"/>
+         <column name="baseamount" type="DECIMAL(10, 3)"/>
+         <column name="description" type="VARCHAR(255)"/>
+         <column name="discountamount" type="DECIMAL(10, 3)"/>
+         <column name="discountpct" type="FLOAT"/>
+         <column name="price" type="DECIMAL(10, 3)"/>
+         <column name="quantity" type="BIGINT"/>
+         <column name="taxamount" type="DECIMAL(10, 3)"/>
+         <column name="taxrate" type="FLOAT"/>
+         <column name="totalamount" type="DECIMAL(10, 3)"/>
+         <column name="catalog_id" type="BIGINT"/>
+         <column name="discount_id" type="BIGINT"/>
+         <column name="tax_id" type="BIGINT"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-4">
+      <createTable tableName="payment_method">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="payment_methodPK"/>
+         </column>
+         <column name="description" type="VARCHAR(10)">
+            <constraints nullable="false"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-5">
+      <createTable tableName="point_of_sale">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="point_of_salePK"/>
+         </column>
+         <column name="activated" type="BOOLEAN"/>
+         <column name="shop_id" type="BIGINT"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-6">
+      <createTable tableName="product">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="productPK"/>
+         </column>
+         <column name="description" type="VARCHAR(20)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="discount_id" type="BIGINT"/>
+         <column name="tax_id" type="BIGINT"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-7">
+      <createTable tableName="sale">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="salePK"/>
+         </column>
+         <column name="completed" type="BOOLEAN"/>
+         <column name="payedamount" type="DECIMAL(10, 2)"/>
+         <column name="time" type="datetime"/>
+         <column name="totalamount" type="DECIMAL(10, 2)"/>
+         <column name="paymentmethod_id" type="BIGINT"/>
+         <column name="turn_id" type="BIGINT"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-8">
+      <createTable tableName="shop">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="shopPK"/>
+         </column>
+         <column name="address" type="VARCHAR(30)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="city" type="VARCHAR(30)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="name" type="VARCHAR(30)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="phone" type="VARCHAR(20)">
+            <constraints nullable="false"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-9">
+      <createTable tableName="tax">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="taxPK"/>
+         </column>
+         <column name="description" type="VARCHAR(10)">
+            <constraints nullable="false"/>
+         </column>
+         <column name="rate" type="FLOAT">
+            <constraints nullable="false"/>
+         </column>
+      </createTable>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-10">
+      <createTable tableName="tax_summary">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="tax_summaryPK"/>
+         </column>
+         <column name="taxamount" type="DECIMAL(10, 2)"/>
+         <column name="taxbase" type="DECIMAL(10, 2)"/>
+         <column name="taxrate" type="FLOAT"/>
+         <column name="totalamount" type="DECIMAL(10, 2)"/>
+         <column name="sale_id" type="BIGINT"/>
+         <column name="tax_id" type="BIGINT"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-11">
+      <createTable tableName="turn">
+         <column autoIncrement="true" name="id" type="BIGINT">
+            <constraints primaryKey="true" primaryKeyName="turnPK"/>
+         </column>
+         <column name="activated" type="BOOLEAN"/>
+         <column name="ended" type="datetime"/>
+         <column name="started" type="datetime"/>
+         <column name="cashier_id" type="BIGINT"/>
+         <column name="pointofsale_id" type="BIGINT"/>
+      </createTable>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-12">
+      <addForeignKeyConstraint baseColumnNames="pointofsale_id"
+                               baseTableName="turn"
+                               constraintName="FK_35djo6w4jrsjk3mp3gd4sftas"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="point_of_sale"/>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-13">
+      <addForeignKeyConstraint baseColumnNames="shop_id"
+                               baseTableName="point_of_sale"
+                               constraintName="FK_524t33gyl4odb32cde31wcj8a"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="shop"/>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-14">
+      <addForeignKeyConstraint baseColumnNames="product_id"
+                               baseTableName="catalog"
+                               constraintName="FK_9gggyslu2usn0rxs32mf055wq"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="product"/>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-15">
+      <addForeignKeyConstraint baseColumnNames="discount_id"
+                               baseTableName="item"
+                               constraintName="FK_awbqw9fmcinowys1sr080dcva"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="discount"/>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-16">
+      <addForeignKeyConstraint baseColumnNames="turn_id"
+                               baseTableName="sale"
+                               constraintName="FK_btmgtu9068ij4d2cgfo5bl0kg"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="turn"/>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-17">
+      <addForeignKeyConstraint baseColumnNames="catalog_id"
+                               baseTableName="item"
+                               constraintName="FK_cmuja267il762gncm3bcw9plf"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="catalog"/>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-18">
+      <addForeignKeyConstraint baseColumnNames="tax_id"
+                               baseTableName="product"
+                               constraintName="FK_g3s6xwpwdktu3j5rlln795u7r"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="tax"/>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-19">
+      <addForeignKeyConstraint baseColumnNames="discount_id"
+                               baseTableName="product"
+                               constraintName="FK_gixufts2hb9ekanpv6hcggf33"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="discount"/>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-20">
+      <addForeignKeyConstraint baseColumnNames="shop_id"
+                               baseTableName="catalog"
+                               constraintName="FK_i6hjqhfmroey8r6slrsocjup0"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="shop"/>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-21">
+      <addForeignKeyConstraint baseColumnNames="tax_id"
+                               baseTableName="item"
+                               constraintName="FK_jddg5w31385o7xd7vrk1l5srh"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="tax"/>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-22">
+      <addForeignKeyConstraint baseColumnNames="tax_id"
+                               baseTableName="tax_summary"
+                               constraintName="FK_khed1r8yam6ggal29b8i3xifu"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="tax"/>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-23">
+      <addForeignKeyConstraint baseColumnNames="sale_id"
+                               baseTableName="tax_summary"
+                               constraintName="FK_msvqs5ubs09p4m38k8wkgrbf7"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="sale"/>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-24">
+      <addForeignKeyConstraint baseColumnNames="cashier_id"
+                               baseTableName="turn"
+                               constraintName="FK_nt8tisd5jl4sas55km2lr65ed"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="jhi_user"/>
+   </changeSet>
+   <changeSet author="javier (generated)" id="1452711462700-25">
+      <addForeignKeyConstraint baseColumnNames="paymentmethod_id"
+                               baseTableName="sale"
+                               constraintName="FK_oq8s4ictmdgg1pth2ttvpsrb5"
+                               deferrable="false"
+                               initiallyDeferred="false"
+                               referencedColumnNames="id"
+                               referencedTableName="payment_method"/>
+   </changeSet>
+</databaseChangeLog>

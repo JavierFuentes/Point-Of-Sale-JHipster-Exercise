@@ -1,0 +1,23 @@
+<!-- Summary Ticket Header -->
+<div class="row" style="text-align: left; font-size: 70%; padding: 0px 10px">
+    <div style="float: left">
+        <div><strong>{{shopData.name}}</strong></div>
+        <div>{{shopData.address}}</div>
+        <div>{{shopData.city}}</div>
+        <div>{{shopData.phone}}</div>
+    </div>
+
+    <div style="float: right">
+        <div translate="pos.summary.detail.pointofsale"
+             translate-values="{ posId: '{{pointofsale.id}}' }">
+            Point of Sale #{{pointofsale.id}}
+        </div>
+        <div>
+            {{saleData.time | date : 'medium'}}
+        </div>
+        <div translate="pos.summary.detail.cashier"
+             translate-values="{ cashierName: '{{cashier.firstName}} {{cashier.lastName}}' }">
+            Cashier: {{cashier.firstName}} {{cashier.lastName}}
+        </div>
+    </div>
+</div>

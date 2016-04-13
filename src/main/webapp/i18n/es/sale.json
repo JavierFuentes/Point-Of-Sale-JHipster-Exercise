@@ -1,0 +1,28 @@
+{
+    "pOSDesignPatternsExerciseApp": {
+        "sale" : {
+            "home": {
+                "title": "Ventas",
+                "createLabel": "Crear nueva Venta",
+                "createOrEditLabel": "Crear o editar Venta"
+            },
+            "created": "Una nueva Venta ha sido creada con el identificador {{ param }}",
+            "updated": "Una Venta ha sido actualizada con el identificador {{ param }}",
+            "deleted": "Una Venta ha sido eliminada con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Venta {{ id }}?"
+            },
+            "detail": {
+                "title": "Venta"
+            },
+            "completed": "Completada",
+            "time": "Fecha/Hora",
+            "totalamount": "Importe Total (i.i)",
+            "payedamount": "Importe Pagado",
+            "turn": "Turno",
+            "paymentmethod": "Forma de Pago",
+            "taxSummary": "Cálculo de Impuestos",
+            "paymentauth": "Autoriz. Pago"
+        }
+    }
+}

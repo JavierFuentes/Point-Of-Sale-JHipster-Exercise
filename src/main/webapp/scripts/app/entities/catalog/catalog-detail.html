@@ -1,0 +1,62 @@
+
+<div>
+    <h2><span translate="pOSDesignPatternsExerciseApp.catalog.detail.title">Catalog</span> {{catalog.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.catalog.shop">shop</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="shop.detail({id:catalog.shop.id})">{{catalog.shop.name}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.catalog.product">product</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="product.detail({id:catalog.product.id})">{{catalog.product.description}}</a>
+                </td>
+            </tr>
+            <tr>
+            <td>
+            <span translate="pOSDesignPatternsExerciseApp.catalog.price">Price</span>
+            </td>
+            <td>
+            <span class="form-control-static">{{catalog.price}}</span>
+            </td>
+            </tr>
+            <tr>
+            <td>
+            <span translate="pOSDesignPatternsExerciseApp.catalog.inventory">Inventory</span>
+            </td>
+            <td>
+            <span class="form-control-static">{{catalog.inventory}}</span>
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.catalog.barcode">Barcode</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{catalog.barcode}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

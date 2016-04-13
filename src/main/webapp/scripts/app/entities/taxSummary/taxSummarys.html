@@ -1,0 +1,65 @@
+<div>
+    <h2 translate="pOSDesignPatternsExerciseApp.taxSummary.home.title">TaxSummarys</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="taxSummary.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="pOSDesignPatternsExerciseApp.taxSummary.home.createLabel">Create a new TaxSummary</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="taxbase"><span translate="pOSDesignPatternsExerciseApp.taxSummary.taxbase">Taxbase</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="taxrate"><span translate="pOSDesignPatternsExerciseApp.taxSummary.taxrate">Taxrate</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="taxamount"><span translate="pOSDesignPatternsExerciseApp.taxSummary.taxamount">Taxamount</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="totalamount"><span translate="pOSDesignPatternsExerciseApp.taxSummary.totalamount">Totalamount</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tax.description"><span translate="pOSDesignPatternsExerciseApp.taxSummary.tax">tax</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="sale.id"><span translate="pOSDesignPatternsExerciseApp.taxSummary.sale">sale</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="taxSummary in taxSummarys track by taxSummary.id">
+                    <td><a ui-sref="taxSummary.detail({id:taxSummary.id})">{{taxSummary.id}}</a></td>
+                    <td>{{taxSummary.taxbase}}</td>
+                    <td>{{taxSummary.taxrate}}</td>
+                    <td>{{taxSummary.taxamount}}</td>
+                    <td>{{taxSummary.totalamount}}</td>
+                    <td>
+                        <a ui-sref="tax.detail({id:taxSummary.tax.id})">{{taxSummary.tax.description}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="sale.detail({id:taxSummary.sale.id})">{{taxSummary.sale.id}}</a>
+                    </td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="taxSummary.detail({id:taxSummary.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="taxSummary.edit({id:taxSummary.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="taxSummary.delete({id:taxSummary.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <uib-pagination class="pagination-sm" total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pagination>
+    </div>
+</div>

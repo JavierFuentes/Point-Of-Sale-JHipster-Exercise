@@ -1,0 +1,81 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "discount",
+      "otherEntityName": "discount",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "description"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "tax",
+      "otherEntityName": "tax",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "description"
+    },
+    {
+      "relationshipId": 3,
+      "relationshipName": "catalog",
+      "otherEntityName": "catalog",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "barcode"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "barcode",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "quantity",
+      "fieldType": "Long"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "price",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldId": 5,
+      "fieldName": "discountpct",
+      "fieldType": "Float"
+    },
+    {
+      "fieldId": 6,
+      "fieldName": "discountamount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldId": 7,
+      "fieldName": "baseamount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldId": 8,
+      "fieldName": "taxrate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldId": 9,
+      "fieldName": "taxamount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldId": 10,
+      "fieldName": "totalamount",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "changelogDate": "20160112235855",
+  "dto": "no",
+  "pagination": "pagination",
+  "javadoc": "Item entity"
+}

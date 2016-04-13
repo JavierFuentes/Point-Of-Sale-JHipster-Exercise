@@ -1,0 +1,192 @@
+@media print {
+    body * {
+        visibility:hidden;
+    }
+
+    td {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    #printSection, #printSection * {
+        visibility:visible;
+    }
+    #printSection {
+        position:absolute;
+        left:0;
+        top:0;
+    }
+}
+
+@media screen {
+
+    td {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .ticketPanel {
+        width: 50%;
+        display: block;
+        min-height: 60vh; /*380px;*/
+        max-height: 60vh;
+        background-color: lightgray;
+        float: left;
+        margin: 1vmin 1vmin 1vmin 1vmin;
+        padding: 2vmin;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-family: monospace;
+        font-size: 1.5vmin;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .summaryPanel {
+        width: 40%;
+        max-width: 40%;
+        display: block;
+        min-height: 45vh; /*280px;*/
+        max-height: 45vh;
+        float: right;
+        margin: 1vmin 3vmin 1vmin 1vmin;
+        padding: 1vmin 2vmin;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-family: monospace;
+        /*font-size: 1.5vmin;*/
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: blanchedalmond;
+    }
+
+    .ticketPanel, .summaryPanel {
+        box-shadow: 10px 10px 5px #888888;
+    }
+
+    .summaryTitle {
+        text-align: center;
+        font-family: monospace;
+        padding: 5px 20px;
+        margin-bottom: 10px;
+        font-size: 3vmin;
+        font-weight: bolder;
+        background-color: tan;
+        border-radius: 5px;
+    }
+
+    .summaryColumn1,.summaryColumn2 {
+        font-family: monospace;
+        padding-top: 2px;
+        padding-bottom: 0px;
+        font-size: 2vmin;
+    }
+
+    .summaryColumn1 {
+        width: 55%;
+        text-align: left;
+    }
+
+    .summaryColumn2 {
+        width: 45%;
+        text-align: right;
+    }
+
+    .summary-button-group {
+        position: absolute;
+        bottom: 20px;
+        right: 15px;
+    }
+
+    .summarybutton {
+        box-shadow: 10px 10px 5px #888888;
+        font-family: FontAwesome;
+        font-size: 2vmin;
+    }
+}
+
+@media only screen and (orientation: portrait) {
+    td {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .ticketPanel {
+        width: 90%;
+        display: block;
+        min-height: 0px;
+        max-height: 100%;
+        background-color: lightgray;
+        float: left;
+        margin: 3vmin 3vmin 3vmin 3vmin;
+        padding: 2vmin;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-family: monospace;
+        font-size: 2.5vmin;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .summaryPanel {
+        width: 90%;
+        max-width: 90%;
+        display: block;
+        min-height: 0px;
+        max-height: 100%;
+        float: left;
+        margin: 3vmin 3vmin 3vmin 3vmin;
+        padding: 1vmin 2vmin;
+        border: 1px solid black;
+        border-radius: 5px;
+        font-family: monospace;
+        /*font-size: 3.5vmin; !important;*/
+        overflow-y: auto;
+        overflow-x: hidden;
+        background-color: blanchedalmond;
+    }
+
+    .ticketPanel, .summaryPanel {
+        box-shadow: 10px 10px 5px #888888;
+    }
+
+    .summaryTitle {
+        text-align: center;
+        font-family: monospace;
+        padding: 5px 20px;
+        margin-bottom: 10px;
+        font-size: 3vmin;
+        font-weight: bolder;
+        background-color: tan;
+        border-radius: 5px;
+    }
+
+    .summaryColumn1,.summaryColumn2 {
+        font-family: monospace;
+        padding-top: 2px;
+        padding-bottom: 0px;
+        font-size: 3.5vmin;
+    }
+
+    .summaryColumn1 {
+        width: 55%;
+        text-align: left;
+    }
+
+    .summaryColumn2 {
+        width: 45%;
+        text-align: right;
+    }
+
+    .summary-button-group {
+        display: block;
+        position: inherit;
+        margin: 0vmin 3vmin 0vmin 3vmin;
+    }
+
+    .summarybutton {
+        box-shadow: none;
+        font-family: FontAwesome;
+        font-size: 4vmin;
+    }
+}

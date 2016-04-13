@@ -1,0 +1,54 @@
+
+<div>
+    <h2><span translate="pOSDesignPatternsExerciseApp.shop.detail.title">Shop</span> {{shop.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.shop.name">Name</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{shop.name}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.shop.address">Address</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{shop.address}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.shop.city">City</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{shop.city}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.shop.phone">Phone</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{shop.phone}}</span>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

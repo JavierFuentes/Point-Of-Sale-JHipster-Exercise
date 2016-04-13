@@ -1,0 +1,112 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myItemLabel" translate="pOSDesignPatternsExerciseApp.item.home.createOrEditLabel">Create or edit a Item</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="item.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.item.barcode" for="field_barcode">Barcode</label>
+            <input type="text" class="form-control" name="barcode" id="field_barcode"
+                    ng-model="item.barcode"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.item.description" for="field_description">Description</label>
+            <input type="text" class="form-control" name="description" id="field_description"
+                    ng-model="item.description"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.item.quantity" for="field_quantity">Quantity</label>
+            <input type="number" class="form-control" name="quantity" id="field_quantity"
+                    ng-model="item.quantity"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.item.price" for="field_price">Price</label>
+            <input type="number" class="form-control" name="price" id="field_price"
+                    ng-model="item.price"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.item.discountpct" for="field_discountpct">Discountpct</label>
+            <input type="number" class="form-control" name="discountpct" id="field_discountpct"
+                    ng-model="item.discountpct"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.item.discountamount" for="field_discountamount">Discountamount</label>
+            <input type="number" class="form-control" name="discountamount" id="field_discountamount"
+                    ng-model="item.discountamount"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.item.baseamount" for="field_baseamount">Baseamount</label>
+            <input type="number" class="form-control" name="baseamount" id="field_baseamount"
+                    ng-model="item.baseamount"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.item.taxrate" for="field_taxrate">Taxrate</label>
+            <input type="number" class="form-control" name="taxrate" id="field_taxrate"
+                    ng-model="item.taxrate"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.item.taxamount" for="field_taxamount">Taxamount</label>
+            <input type="number" class="form-control" name="taxamount" id="field_taxamount"
+                    ng-model="item.taxamount"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.item.totalamount" for="field_totalamount">Totalamount</label>
+            <input type="number" class="form-control" name="totalamount" id="field_totalamount"
+                    ng-model="item.totalamount"
+                     />
+        </div>
+
+        <div class="form-group">
+            <label translate="pOSDesignPatternsExerciseApp.item.discount" for="field_discount">discount</label>
+            <select class="form-control" id="field_discount" name="discount" ng-model="item.discount" ng-options="discount as discount.description for discount in discounts track by discount.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="pOSDesignPatternsExerciseApp.item.tax" for="field_tax">tax</label>
+            <select class="form-control" id="field_tax" name="tax" ng-model="item.tax" ng-options="tax as tax.description for tax in taxs track by tax.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="pOSDesignPatternsExerciseApp.item.catalog" for="field_catalog">catalog</label>
+            <select class="form-control" id="field_catalog" name="catalog" ng-model="item.catalog" ng-options="catalog as catalog.barcode for catalog in catalogs track by catalog.id"
+                required ng-change="onCatalogChange()">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="pOSDesignPatternsExerciseApp.item.sale" for="field_sale">catalog</label>
+            <select class="form-control" id="field_sale" name="sale" ng-model="item.sale" ng-options="sale as sale.id for sale in sales track by sale.id"
+                    required">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

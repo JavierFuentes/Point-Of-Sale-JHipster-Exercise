@@ -1,0 +1,90 @@
+<!-- Summary Panel -->
+<div class="summaryPanel">
+    <div class="summaryTitle" translate="pos.summary.title">Summary</div>
+
+    <table style="width: 100%; margin-left: auto; margin-right: auto">
+        <tr>
+            <td class="summaryColumn1" translate="pos.summary.products"
+                translate-values="{ totalQuantity: '{{totalQty}}' }">
+                {{totalQty}} Products
+            </td>
+            <td class="summaryColumn2">
+                {{totalWODiscount | number : 2}} €
+            </td>
+        </tr>
+
+        <tr>
+            <td class="summaryColumn1" translate="pos.summary.discount">
+                Discount
+            </td>
+            <td class="summaryColumn2">
+                {{totalDiscount | number : 2}} €
+            </td>
+        </tr>
+
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="summaryColumn1" translate="pos.summary.subtotal">
+                Subtotal
+            </td>
+            <td class="summaryColumn2">
+                {{totalBase | number : 2}} €
+            </td>
+        </tr>
+
+        <tr>
+            <td class="summaryColumn1" translate="pos.summary.taxes">
+                TAXES
+            </td>
+            <td class="summaryColumn2">
+                {{totalQuota | number : 2}} €
+            </td>
+        </tr>
+
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="summaryColumn1" translate="pos.summary.total">
+                <strong>TOTAL</strong>
+            </td>
+            <td class="summaryColumn2">
+                <strong>{{totalAmount | number : 2}} €</strong>
+            </td>
+        </tr>
+
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td class="summaryColumn1" translate="pos.summary.payment">
+                Payment
+            </td>
+            <td class="summaryColumn2">
+                <input type="text" class="form-control" id="inputAmount" placeholder="0.00" autocomplete="off"
+                       style="background-color: transparent; width: 12vmin !important; max-height: 5vmin !important; font-size: 2vmin;
+                              float: right; text-align: right;"
+                       ng-model="payedAmount" ng-change="onPayedChange()"
+                       ng-keyup="onInputAmountKeyUp($event)">
+            </td>
+        </tr>
+
+        <tr>
+            <td class="summaryColumn1" translate="pos.summary.toreturn">
+                <strong>To Return</strong>
+            </td>
+            <td class="summaryColumn2">
+                <strong>{{amountToReturn | number : 2}} €</strong>
+            </td>
+        </tr>
+    </table>
+</div>
+

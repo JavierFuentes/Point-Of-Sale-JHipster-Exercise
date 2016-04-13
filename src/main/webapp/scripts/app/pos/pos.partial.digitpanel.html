@@ -1,0 +1,30 @@
+<!-- Point of Sale Digits Panel -->
+<div class="digitPanel">
+    <!-- Digits -->
+    <div class="digitKey" ng-repeat="key in digitKeys | limitTo: 9" ng-click="digitClicked(key.value)">
+        {{ key.label }}
+    </div>
+
+    <!-- Zero row -->
+    <div class="signKey" ng-click="operationClicked(operationKeys[0].operation)" uib-tooltip="Keys: - +">
+        {{signShowed}}
+    </div>
+    <div class="digitKey" ng-click="digitClicked(digitKeys[9].value)">
+        {{digitKeys[9].label}}
+    </div>
+    <div class="cartKey" ng-click="operationClicked(operationKeys[2].operation)" uib-tooltip="Key: Intro">
+        <span class="fa fa-shopping-cart"></span>
+    </div>
+
+    <!--Last row-->
+    <div class="clearKey" ng-click="operationClicked(operationKeys[1].operation)"
+         uib-tooltip="Keys: Esc, Supr, Backspace">
+        <span class="fa fa-times"></span>
+    </div>
+    <div class="summaryKey" ng-click="operationClicked(operationKeys[3].operation)"
+         uib-tooltip="Key: Sapace Bar">
+        <span class="fa fa-money" translate="pos.cart.label.pay">>
+            Pay
+        </span>
+    </div>
+</div>

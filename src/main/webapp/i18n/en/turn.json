@@ -1,0 +1,26 @@
+{
+    "pOSDesignPatternsExerciseApp": {
+        "turn" : {
+            "home": {
+                "title": "Turns",
+                "createLabel": "Create a new Turn",
+                "createOrEditLabel": "Create or edit a Turn"
+            },
+            "created": "A new Turn is created with identifier {{ param }}",
+            "updated": "A Turn is updated with identifier {{ param }}",
+            "deleted": "A Turn is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Turn {{ id }}?"
+            },
+            "detail": {
+                "title": "Turn"
+            },
+            "activated": "Activated",
+            "started": "Started",
+            "ended": "Ended",
+            "pointofsale": "Pointofsale",
+            "sale": "Sale",
+            "cashier": "Cashier"
+        }
+    }
+}

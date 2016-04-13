@@ -1,0 +1,4 @@
+id;activated;cashier_id;pointofsale_id
+1;true;5;1
+2;false;5;2
+3;true;6;3

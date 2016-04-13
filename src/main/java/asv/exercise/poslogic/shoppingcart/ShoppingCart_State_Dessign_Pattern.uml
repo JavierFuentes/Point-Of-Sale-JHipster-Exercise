@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>asv.exercise.poslogic.shoppingcart.ShoppingCart</OriginalElement>
+  <nodes>
+    <node x="341.5678457000877" y="1385.1156565357878">asv.exercise.poslogic.shoppingcart.AbstractShoppingCartContext</node>
+    <node x="669.9679834710685" y="869.0471796777883">asv.exercise.poslogic.shoppingcart.states.ShoppingCartPaymentFailureState</node>
+    <node x="687.8778414466599" y="1031.5294861627558">asv.exercise.poslogic.shoppingcart.states.ShoppingCartNonEmptyState</node>
+    <node x="32.325997702408756" y="1318.0541923797268">asv.exercise.poslogic.shoppingcart.states.ShoppingCartSavingTransactionState</node>
+    <node x="339.88787454943196" y="761.7852029393922">asv.exercise.poslogic.shoppingcart.states.ShoppingCartPaymentConfirmationState</node>
+    <node x="703.4949949647119" y="1310.720052688845">asv.exercise.poslogic.shoppingcart.states.ShoppingCartInitialState</node>
+    <node x="384.80880691566534" y="1028.658606259013">asv.exercise.poslogic.shoppingcart.states.AbstractShoppingCartState</node>
+    <node x="433.79302207778426" y="1529.0929054054054">asv.exercise.poslogic.shoppingcart.ShoppingCart</node>
+    <node x="36.0" y="868.1326733178928">asv.exercise.poslogic.shoppingcart.states.ShoppingCartPaymentSuccessState</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="asv.exercise.poslogic.shoppingcart.states.ShoppingCartPaymentConfirmationState" target="asv.exercise.poslogic.shoppingcart.states.ShoppingCartPaymentSuccessState">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.states.ShoppingCartInitialState" target="asv.exercise.poslogic.shoppingcart.states.ShoppingCartNonEmptyState">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.states.ShoppingCartSavingTransactionState" target="asv.exercise.poslogic.shoppingcart.states.ShoppingCartInitialState">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.states.ShoppingCartPaymentSuccessState" target="asv.exercise.poslogic.shoppingcart.states.AbstractShoppingCartState">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.states.ShoppingCartPaymentFailureState" target="asv.exercise.poslogic.shoppingcart.states.ShoppingCartNonEmptyState">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.states.ShoppingCartNonEmptyState" target="asv.exercise.poslogic.shoppingcart.states.AbstractShoppingCartState">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.states.ShoppingCartInitialState" target="asv.exercise.poslogic.shoppingcart.states.AbstractShoppingCartState">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.AbstractShoppingCartContext" target="asv.exercise.poslogic.shoppingcart.states.AbstractShoppingCartState">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.states.ShoppingCartSavingTransactionState" target="asv.exercise.poslogic.shoppingcart.states.AbstractShoppingCartState">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.states.ShoppingCartPaymentConfirmationState" target="asv.exercise.poslogic.shoppingcart.states.AbstractShoppingCartState">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.states.ShoppingCartNonEmptyState" target="asv.exercise.poslogic.shoppingcart.states.ShoppingCartPaymentConfirmationState">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.states.ShoppingCartPaymentConfirmationState" target="asv.exercise.poslogic.shoppingcart.states.ShoppingCartPaymentFailureState">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.states.ShoppingCartPaymentSuccessState" target="asv.exercise.poslogic.shoppingcart.states.ShoppingCartSavingTransactionState">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.states.ShoppingCartPaymentFailureState" target="asv.exercise.poslogic.shoppingcart.states.AbstractShoppingCartState">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.ShoppingCart" target="asv.exercise.poslogic.shoppingcart.AbstractShoppingCartContext">
+      <point x="0.0" y="0.0" />
+      <point x="0.0" y="0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="472.5" y="1160.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

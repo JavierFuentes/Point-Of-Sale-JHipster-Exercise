@@ -1,0 +1,26 @@
+{
+    "pOSDesignPatternsExerciseApp": {
+        "shop" : {
+            "home": {
+                "title": "Tiendas",
+                "createLabel": "Crear nueva Tienda",
+                "createOrEditLabel": "Crear o editar Tienda"
+            },
+            "created": "Una nueva Tienda ha sido creada con el identificador {{ param }}",
+            "updated": "Una Tienda ha sido actualizada con el identificador {{ param }}",
+            "deleted": "Una Tienda ha sido eliminada con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Tienda {{ id }}?"
+            },
+            "detail": {
+                "title": "Tienda"
+            },
+            "name": "Nombre",
+            "address": "Dirección",
+            "city": "Ciudad",
+            "phone": "Telefono",
+            "catalog": "Catálogo",
+            "pointofsale": "TPV"
+        }
+    }
+}

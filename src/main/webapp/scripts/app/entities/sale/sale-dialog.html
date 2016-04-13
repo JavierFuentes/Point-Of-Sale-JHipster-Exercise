@@ -1,0 +1,69 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="mySaleLabel" translate="pOSDesignPatternsExerciseApp.sale.home.createOrEditLabel">Create or edit a Sale</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id" translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="sale.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.sale.completed" for="field_completed">Completed</label>
+            <input type="checkbox" class="form-control" name="completed" id="field_completed"
+                    ng-model="sale.completed"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.sale.time" for="field_time">Time</label>
+            <input id="field_time" type="text" class="form-control" uib-datepicker-popup="{{dateformat}}" ng-model="sale.time" is-open="datePickerForTime.status.opened"
+            />
+            <span class="input-group-btn">
+                <button type="button" class="btn btn-default" ng-click="datePickerForTimeOpen($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.sale.totalamount" for="field_totalamount">Totalamount</label>
+            <input type="number" class="form-control" name="totalamount" id="field_totalamount"
+                    ng-model="sale.totalamount"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.sale.payedamount" for="field_payedamount">Payedamount</label>
+            <input type="number" class="form-control" name="payedamount" id="field_payedamount"
+                    ng-model="sale.payedamount"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" translate="pOSDesignPatternsExerciseApp.sale.paymentauth" for="field_paymentauth">Paymentauth</label>
+            <input type="text" class="form-control" name="paymentauth" id="field_paymentauth"
+                   ng-model="sale.paymentauth"
+            />
+        </div>
+        <div class="form-group">
+            <label translate="pOSDesignPatternsExerciseApp.sale.turn" for="field_turn">turn</label>
+            <select class="form-control" id="field_turn" name="turn" ng-model="sale.turn" ng-options="turn as turn.id for turn in turns track by turn.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label translate="pOSDesignPatternsExerciseApp.sale.paymentmethod" for="field_paymentmethod">paymentmethod</label>
+            <select class="form-control" id="field_paymentmethod" name="paymentmethod" ng-model="sale.paymentmethod" ng-options="paymentMethod as paymentMethod.description for paymentMethod in paymentmethods track by paymentMethod.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

@@ -1,0 +1,25 @@
+{
+  "generator-jhipster": {
+    "baseName": "POS_Design_Patterns_Exercise",
+    "packageName": "asv.exercise",
+    "packageFolder": "asv/exercise",
+    "authenticationType": "session",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "postgres",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": true,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "3b55b319c5f7b345fca7ecd7c89759859ce2ab14",
+    "testFrameworks": [
+      "gatling",
+      "protractor"
+    ]
+  }
+}

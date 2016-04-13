@@ -1,0 +1,23 @@
+{
+    "pOSDesignPatternsExerciseApp": {
+        "pointofsale" : {
+            "home": {
+                "title": "Pointofsales",
+                "createLabel": "Create a new Pointofsale",
+                "createOrEditLabel": "Create or edit a Pointofsale"
+            },
+            "created": "A new Pointofsale is created with identifier {{ param }}",
+            "updated": "A Pointofsale is updated with identifier {{ param }}",
+            "deleted": "A Pointofsale is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Pointofsale {{ id }}?"
+            },
+            "detail": {
+                "title": "Pointofsale"
+            },
+            "activated": "Activated",
+            "shop": "Shop",
+            "turn": "Turn"
+        }
+    }
+}

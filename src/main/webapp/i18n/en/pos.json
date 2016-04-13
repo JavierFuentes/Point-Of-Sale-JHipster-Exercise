@@ -1,0 +1,18 @@
+{
+    "pos": {
+        "home": {
+          "summaryTitle" : "Payment Method"
+        },
+        "messages": {
+            "validate": {
+                "barcode": {
+                    "pattern": "Barcode can only contain 5-13 digits."
+                }
+            },
+            "success": "Saved in sever!",
+            "error": {
+                "productnotexists": "Barcode {{ barcode }} not exists."
+            }
+        }
+    }
+}

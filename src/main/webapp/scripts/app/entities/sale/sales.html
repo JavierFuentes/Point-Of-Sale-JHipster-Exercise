@@ -1,0 +1,67 @@
+<div>
+    <h2 translate="pOSDesignPatternsExerciseApp.sale.home.title">Sales</h2>
+    <jh-alert></jh-alert>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <button class="btn btn-primary" ui-sref="sale.new">
+                    <span class="glyphicon glyphicon-flash"></span> <span translate="pOSDesignPatternsExerciseApp.sale.home.createLabel">Create a new Sale</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
+                    <th jh-sort-by="id"><span translate="global.field.id">ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="completed"><span translate="pOSDesignPatternsExerciseApp.sale.completed">Completed</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="time"><span translate="pOSDesignPatternsExerciseApp.sale.time">Time</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="totalamount"><span translate="pOSDesignPatternsExerciseApp.sale.totalamount">Totalamount</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="payedamount"><span translate="pOSDesignPatternsExerciseApp.sale.payedamount">Payedamount</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="paymentauth"><span translate="pOSDesignPatternsExerciseApp.sale.paymentauth">Paymentauth</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="turn.id"><span translate="pOSDesignPatternsExerciseApp.sale.turn">turn</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="paymentmethod.description"><span translate="pOSDesignPatternsExerciseApp.sale.paymentmethod">paymentmethod</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="sale in sales track by sale.id">
+                    <td><a ui-sref="sale.detail({id:sale.id})">{{sale.id}}</a></td>
+                    <td>{{sale.completed}}</td>
+                    <td>{{sale.time | date:'medium'}}</td>
+                    <td>{{sale.totalamount}}</td>
+                    <td>{{sale.payedamount}}</td>
+                    <td>{{sale.paymentauth}}</td>
+                    <td>
+                        <a ui-sref="turn.detail({id:sale.turn.id})">{{sale.turn.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="paymentMethod.detail({id:sale.paymentmethod.id})">{{sale.paymentmethod.description}}</a>
+                    </td>
+                    <td>
+                        <button type="submit"
+                                ui-sref="sale.detail({id:sale.id})"
+                                class="btn btn-info btn-sm">
+                            <span class="glyphicon glyphicon-eye-open"></span>&nbsp;<span translate="entity.action.view"> View</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="sale.edit({id:sale.id})"
+                                class="btn btn-primary btn-sm">
+                            <span class="glyphicon glyphicon-pencil"></span>&nbsp;<span translate="entity.action.edit"> Edit</span>
+                        </button>
+                        <button type="submit"
+                                ui-sref="sale.delete({id:sale.id})"
+                                class="btn btn-danger btn-sm">
+                            <span class="glyphicon glyphicon-remove-circle"></span>&nbsp;<span translate="entity.action.delete"> Delete</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <uib-pagination class="pagination-sm" total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pagination>
+    </div>
+</div>

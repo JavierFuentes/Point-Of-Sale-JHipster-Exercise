@@ -1,0 +1,27 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "sale",
+      "otherEntityName": "sale",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "paymentmethod"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 10
+    }
+  ],
+  "changelogDate": "20160112235855",
+  "dto": "no",
+  "pagination": "pagination",
+  "javadoc": "Payment Method"
+}

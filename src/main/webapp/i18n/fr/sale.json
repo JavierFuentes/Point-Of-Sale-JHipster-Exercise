@@ -1,0 +1,28 @@
+{
+    "pOSDesignPatternsExerciseApp": {
+        "sale" : {
+            "home": {
+                "title": "Sales",
+                "createLabel": "Créer un nouveau Sale",
+                "createOrEditLabel": "Créer ou éditer un Sale"
+            },
+            "created": "Un nouveau Sale a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Sale avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Sale avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Sale {{ id }} ?"
+            },
+            "detail": {
+                "title": "Sale"
+            },
+            "completed": "Completed",
+            "time": "Time",
+            "totalamount": "Totalamount",
+            "payedamount": "Payedamount",
+            "turn": "Turn",
+            "paymentmethod": "Paymentmethod",
+            "taxSummary": "TaxSummary"
+        }
+    }
+}
+

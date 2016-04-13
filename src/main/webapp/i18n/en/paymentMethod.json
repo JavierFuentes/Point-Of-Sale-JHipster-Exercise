@@ -1,0 +1,22 @@
+{
+    "pOSDesignPatternsExerciseApp": {
+        "paymentMethod" : {
+            "home": {
+                "title": "PaymentMethods",
+                "createLabel": "Create a new PaymentMethod",
+                "createOrEditLabel": "Create or edit a PaymentMethod"
+            },
+            "created": "A new PaymentMethod is created with identifier {{ param }}",
+            "updated": "A PaymentMethod is updated with identifier {{ param }}",
+            "deleted": "A PaymentMethod is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete PaymentMethod {{ id }}?"
+            },
+            "detail": {
+                "title": "PaymentMethod"
+            },
+            "description": "Description",
+            "sale": "Sale"
+        }
+    }
+}

@@ -1,0 +1,29 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "shop",
+      "otherEntityName": "shop",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "name"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "turn",
+      "otherEntityName": "turn",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "register"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "activated",
+      "fieldType": "Boolean"
+    }
+  ],
+  "changelogDate": "20160112235855",
+  "dto": "no",
+  "pagination": "no",
+  "javadoc": "Register entity"
+}

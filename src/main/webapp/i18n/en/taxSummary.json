@@ -1,0 +1,26 @@
+{
+    "pOSDesignPatternsExerciseApp": {
+        "taxSummary" : {
+            "home": {
+                "title": "TaxSummarys",
+                "createLabel": "Create a new TaxSummary",
+                "createOrEditLabel": "Create or edit a TaxSummary"
+            },
+            "created": "A new TaxSummary is created with identifier {{ param }}",
+            "updated": "A TaxSummary is updated with identifier {{ param }}",
+            "deleted": "A TaxSummary is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete TaxSummary {{ id }}?"
+            },
+            "detail": {
+                "title": "TaxSummary"
+            },
+            "taxbase": "Taxbase",
+            "taxrate": "Taxrate",
+            "taxamount": "Taxamount",
+            "totalamount": "Totalamount",
+            "tax": "Tax",
+            "sale": "Sale"
+        }
+    }
+}

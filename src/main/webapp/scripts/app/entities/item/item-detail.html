@@ -1,0 +1,134 @@
+
+<div>
+    <h2><span translate="pOSDesignPatternsExerciseApp.item.detail.title">Item</span> {{item.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th translate="entity.detail.field">Field</th>
+                <th translate="entity.detail.value">Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.item.barcode">Barcode</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{item.barcode}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.item.description">Description</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{item.description}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.item.quantity">Quantity</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{item.quantity}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.item.price">Price</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{item.price}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.item.discountpct">Discountpct</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{item.discountpct}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.item.discountamount">Discountamount</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{item.discountamount}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.item.baseamount">Baseamount</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{item.baseamount}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.item.taxrate">Taxrate</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{item.taxrate}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.item.taxamount">Taxamount</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{item.taxamount}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.item.totalamount">Totalamount</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{item.totalamount}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.item.discount">discount</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="discount.detail({id:item.discount.id})">{{item.discount.description}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.item.tax">tax</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="tax.detail({id:item.tax.id})">{{item.tax.description}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.item.catalog">catalog</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="catalog.detail({id:item.catalog.id})">{{item.catalog.barcode}}</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span translate="pOSDesignPatternsExerciseApp.item.sale">catalog</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="sale.detail({id:item.sale.id})">{{item.sale.id}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span translate="entity.action.back"> Back</span>
+    </button>
+</div>

@@ -1,0 +1,46 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "product",
+      "otherEntityName": "product",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "discount"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "item",
+      "otherEntityName": "item",
+      "relationshipType": "one-to-many",
+      "otherEntityRelationshipName": "discount"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "required",
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": 10
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "percentage",
+      "fieldType": "Float",
+      "fieldValidateRules": [
+        "required",
+        "min",
+        "max"
+      ],
+      "fieldValidateRulesMin": 0,
+      "fieldValidateRulesMax": 100
+    }
+  ],
+  "changelogDate": "20160112223416",
+  "dto": "no",
+  "pagination": "pagination",
+  "javadoc": "Discount entity"
+}

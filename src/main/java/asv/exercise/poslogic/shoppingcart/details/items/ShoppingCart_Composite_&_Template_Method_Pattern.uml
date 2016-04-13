@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="41.375" y="237.0">asv.exercise.poslogic.shoppingcart.details.items.ItemList</node>
+    <node x="51.5" y="395.0">asv.exercise.poslogic.shoppingcart.ShoppingCart</node>
+    <node x="85.5" y="0.0">asv.exercise.poslogic.shoppingcart.details.items.AbstractItem</node>
+    <node x="44.875" y="79.0">asv.exercise.poslogic.shoppingcart.details.items.CompositeItem</node>
+    <node x="40.875" y="158.0">asv.exercise.poslogic.shoppingcart.details.items.AbstractItemList</node>
+    <node x="0.0" y="316.0">asv.exercise.poslogic.shoppingcart.AbstractShoppingCartContext</node>
+    <node x="192.875" y="79.0">asv.exercise.poslogic.shoppingcart.details.items.Item</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="asv.exercise.poslogic.shoppingcart.details.items.Item" target="asv.exercise.poslogic.shoppingcart.details.items.AbstractItem">
+      <point x="0.0" y="-14.5" />
+      <point x="222.875" y="54.0" />
+      <point x="179.66666666666666" y="54.0" />
+      <point x="37.66666666666666" y="14.5" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.details.items.ItemList" target="asv.exercise.poslogic.shoppingcart.details.items.AbstractItemList">
+      <point x="0.0" y="-14.5" />
+      <point x="82.875" y="212.0" />
+      <point x="74.875" y="212.0" />
+      <point x="-34.0" y="14.5" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.details.items.AbstractItemList" target="asv.exercise.poslogic.shoppingcart.details.items.CompositeItem">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.AbstractShoppingCartContext" target="asv.exercise.poslogic.shoppingcart.details.items.ItemList">
+      <point x="-55.0" y="-14.5" />
+      <point x="55.0" y="291.0" />
+      <point x="82.875" y="291.0" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.AbstractShoppingCartContext" target="asv.exercise.poslogic.shoppingcart.details.items.AbstractItemList">
+      <point x="55.0" y="-14.5" />
+      <point x="165.0" y="291.0" />
+      <point x="134.875" y="291.0" />
+      <point x="134.875" y="212.0" />
+      <point x="142.875" y="212.0" />
+      <point x="34.0" y="14.5" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.ShoppingCart" target="asv.exercise.poslogic.shoppingcart.AbstractShoppingCartContext">
+      <point x="0.0" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="asv.exercise.poslogic.shoppingcart.details.items.CompositeItem" target="asv.exercise.poslogic.shoppingcart.details.items.AbstractItem">
+      <point x="-32.0" y="-14.5" />
+      <point x="76.875" y="54.0" />
+      <point x="104.33333333333334" y="54.0" />
+      <point x="-37.66666666666666" y="14.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="126.5" y="212.0" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

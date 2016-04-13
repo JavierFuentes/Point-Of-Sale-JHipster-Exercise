@@ -1,0 +1,44 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "tax",
+      "otherEntityName": "tax",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "description"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "sale",
+      "otherEntityName": "sale",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "taxbase",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "taxrate",
+      "fieldType": "Float"
+    },
+    {
+      "fieldId": 3,
+      "fieldName": "taxamount",
+      "fieldType": "BigDecimal"
+    },
+    {
+      "fieldId": 4,
+      "fieldName": "totalamount",
+      "fieldType": "BigDecimal"
+    }
+  ],
+  "changelogDate": "20160113000808",
+  "dto": "no",
+  "pagination": "pagination",
+  "javadoc": "Tax Summary entity"
+}

@@ -1,0 +1,25 @@
+{
+    "pOSDesignPatternsExerciseApp": {
+        "tax" : {
+            "home": {
+                "title": "Impuestos",
+                "createLabel": "Crear nuevo Impuesto",
+                "createOrEditLabel": "Crear o editar Impuesto"
+            },
+            "created": "Un nuevo Impuesto ha sido creado con el identificador {{ param }}",
+            "updated": "Un Impuesto ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Impuesto ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Impuesto {{ id }}?"
+            },
+            "detail": {
+                "title": "Impuesto"
+            },
+            "description": "Descripción",
+            "rate": "%",
+            "product": "Producto",
+            "taxSummary": "Cálculo de Impuestos",
+            "item": "Item"
+        }
+    }
+}

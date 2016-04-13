@@ -1,0 +1,52 @@
+<!-- Summary Ticket Taxes -->
+<div class="row">
+    <table style="width: 100%;">
+        <tr style="font-weight: bold">
+            <td style="text-align: left"
+                translate="pos.summary.detail.tax">
+                Tax
+            </td>
+            <td style="text-align: right"
+                translate="pos.summary.detail.base">
+                Base
+            </td>
+            <td style="text-align: right"
+                translate="pos.summary.detail.quota">
+                Quota
+            </td>
+            <td style="text-align: right"
+                translate="pos.summary.detail.amount">
+                Amount
+            </td>
+        </tr>
+        <tr ng-repeat="taxSummary in taxSummaryList | orderBy: '-taxrate' track by taxSummary.id">
+            <td style="text-align: left">
+                {{taxSummary.tax.description}}
+            </td>
+            <td style="text-align: right">
+                {{taxSummary.taxbase | number : 2}}
+            </td>
+            <td style="text-align: right">
+                {{taxSummary.taxamount | number : 2}}
+            </td>
+            <td style="text-align: right">
+                {{taxSummary.totalamount | number : 2}}
+            </td>
+        </tr>
+        <tr style="font-weight: bold">
+            <td style="text-align: left"
+                translate="pos.summary.detail.totals">
+                TOTALS...
+            </td>
+            <td style="text-align: right">
+                {{totalBase | number : 2}}
+            </td>
+            <td style="text-align: right">
+                {{totalQuota | number : 2}}
+            </td>
+            <td style="text-align: right">
+                {{totalAmount | number : 2}}
+            </td>
+        </tr>
+    </table>
+</div>
