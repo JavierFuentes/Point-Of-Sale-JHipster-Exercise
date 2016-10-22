@@ -2,7 +2,7 @@
 
 This is an exercise using jHipster to develop a Point Of Sale web application.
 
-You can view this app in action [here](http://foobar.cf/pos) thanks to these free resources:
+You can view this app in action [here](http://foobar.cf/tpv) thanks to these free resources:
 
 * [Nixiweb](http://www.nixiweb.com) (my personal domain for static hosting)
 * [Heroku](https://www.heroku.com/) (application server hosting)
